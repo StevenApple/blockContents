@@ -14,6 +14,9 @@
 		B00333BF2213658D0015813F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B00333BD2213658D0015813F /* LaunchScreen.storyboard */; };
 		B00333CA2213658D0015813F /* iOSExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00333C92213658D0015813F /* iOSExtensionTests.swift */; };
 		B00333D52213658D0015813F /* iOSExtensionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00333D42213658D0015813F /* iOSExtensionUITests.swift */; };
+		B00333E9221366650015813F /* blockerList.json in Resources */ = {isa = PBXBuildFile; fileRef = B00333E8221366650015813F /* blockerList.json */; };
+		B00333EB221366650015813F /* ContentBlockerRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00333EA221366650015813F /* ContentBlockerRequestHandler.swift */; };
+		B00333EF221366650015813F /* blockiOS.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B00333E6221366650015813F /* blockiOS.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +34,28 @@
 			remoteGlobalIDString = B00333B02213658C0015813F;
 			remoteInfo = iOSExtension;
 		};
+		B00333ED221366650015813F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B00333A92213658C0015813F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B00333E5221366650015813F;
+			remoteInfo = blockiOS;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B00333F3221366650015813F /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B00333EF221366650015813F /* blockiOS.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		B00333B12213658C0015813F /* iOSExtension.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSExtension.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +71,13 @@
 		B00333D02213658D0015813F /* iOSExtensionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSExtensionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B00333D42213658D0015813F /* iOSExtensionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSExtensionUITests.swift; sourceTree = "<group>"; };
 		B00333D62213658D0015813F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B00333E6221366650015813F /* blockiOS.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = blockiOS.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		B00333E8221366650015813F /* blockerList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = blockerList.json; sourceTree = "<group>"; };
+		B00333EA221366650015813F /* ContentBlockerRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentBlockerRequestHandler.swift; sourceTree = "<group>"; };
+		B00333EC221366650015813F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B00333F4221372870015813F /* blockiOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = blockiOS.entitlements; sourceTree = "<group>"; };
+		B00333F52213728D0015813F /* iOSExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iOSExtension.entitlements; sourceTree = "<group>"; };
+		B00333F6221372E30015813F /* blockeriOS.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = blockeriOS.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +102,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B00333E3221366650015813F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -80,6 +118,7 @@
 				B00333B32213658C0015813F /* iOSExtension */,
 				B00333C82213658D0015813F /* iOSExtensionTests */,
 				B00333D32213658D0015813F /* iOSExtensionUITests */,
+				B00333E7221366650015813F /* blockiOS */,
 				B00333B22213658C0015813F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +129,7 @@
 				B00333B12213658C0015813F /* iOSExtension.app */,
 				B00333C52213658D0015813F /* iOSExtensionTests.xctest */,
 				B00333D02213658D0015813F /* iOSExtensionUITests.xctest */,
+				B00333E6221366650015813F /* blockiOS.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -97,6 +137,8 @@
 		B00333B32213658C0015813F /* iOSExtension */ = {
 			isa = PBXGroup;
 			children = (
+				B00333F52213728D0015813F /* iOSExtension.entitlements */,
+				B00333F6221372E30015813F /* blockeriOS.json */,
 				B00333B42213658C0015813F /* AppDelegate.swift */,
 				B00333B62213658C0015813F /* ViewController.swift */,
 				B00333B82213658C0015813F /* Main.storyboard */,
@@ -125,6 +167,17 @@
 			path = iOSExtensionUITests;
 			sourceTree = "<group>";
 		};
+		B00333E7221366650015813F /* blockiOS */ = {
+			isa = PBXGroup;
+			children = (
+				B00333F4221372870015813F /* blockiOS.entitlements */,
+				B00333E8221366650015813F /* blockerList.json */,
+				B00333EA221366650015813F /* ContentBlockerRequestHandler.swift */,
+				B00333EC221366650015813F /* Info.plist */,
+			);
+			path = blockiOS;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,10 +188,12 @@
 				B00333AD2213658C0015813F /* Sources */,
 				B00333AE2213658C0015813F /* Frameworks */,
 				B00333AF2213658C0015813F /* Resources */,
+				B00333F3221366650015813F /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B00333EE221366650015813F /* PBXTargetDependency */,
 			);
 			name = iOSExtension;
 			productName = iOSExtension;
@@ -181,6 +236,23 @@
 			productReference = B00333D02213658D0015813F /* iOSExtensionUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		B00333E5221366650015813F /* blockiOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B00333F0221366650015813F /* Build configuration list for PBXNativeTarget "blockiOS" */;
+			buildPhases = (
+				B00333E2221366650015813F /* Sources */,
+				B00333E3221366650015813F /* Frameworks */,
+				B00333E4221366650015813F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = blockiOS;
+			productName = blockiOS;
+			productReference = B00333E6221366650015813F /* blockiOS.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -193,6 +265,11 @@
 				TargetAttributes = {
 					B00333B02213658C0015813F = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					B00333C42213658D0015813F = {
 						CreatedOnToolsVersion = 10.1;
@@ -201,6 +278,14 @@
 					B00333CF2213658D0015813F = {
 						CreatedOnToolsVersion = 10.1;
 						TestTargetID = B00333B02213658C0015813F;
+					};
+					B00333E5221366650015813F = {
+						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -220,6 +305,7 @@
 				B00333B02213658C0015813F /* iOSExtension */,
 				B00333C42213658D0015813F /* iOSExtensionTests */,
 				B00333CF2213658D0015813F /* iOSExtensionUITests */,
+				B00333E5221366650015813F /* blockiOS */,
 			);
 		};
 /* End PBXProject section */
@@ -246,6 +332,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B00333E4221366650015813F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B00333E9221366650015813F /* blockerList.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +371,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B00333E2221366650015813F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B00333EB221366650015813F /* ContentBlockerRequestHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -289,6 +391,11 @@
 			isa = PBXTargetDependency;
 			target = B00333B02213658C0015813F /* iOSExtension */;
 			targetProxy = B00333D12213658D0015813F /* PBXContainerItemProxy */;
+		};
+		B00333EE221366650015813F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B00333E5221366650015813F /* blockiOS */;
+			targetProxy = B00333ED221366650015813F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -431,7 +538,9 @@
 		B00333DA2213658D0015813F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = iOSExtension/iOSExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SW3WV4H36L;
 				INFOPLIST_FILE = iOSExtension/Info.plist;
@@ -449,7 +558,9 @@
 		B00333DB2213658D0015813F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = iOSExtension/iOSExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SW3WV4H36L;
 				INFOPLIST_FILE = iOSExtension/Info.plist;
@@ -546,6 +657,48 @@
 			};
 			name = Release;
 		};
+		B00333F1221366650015813F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_ENTITLEMENTS = blockiOS/blockiOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SW3WV4H36L;
+				INFOPLIST_FILE = blockiOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.your.iOSExtension.blockiOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B00333F2221366650015813F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_ENTITLEMENTS = blockiOS/blockiOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SW3WV4H36L;
+				INFOPLIST_FILE = blockiOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.your.iOSExtension.blockiOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -581,6 +734,15 @@
 			buildConfigurations = (
 				B00333E02213658D0015813F /* Debug */,
 				B00333E12213658D0015813F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B00333F0221366650015813F /* Build configuration list for PBXNativeTarget "blockiOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B00333F1221366650015813F /* Debug */,
+				B00333F2221366650015813F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

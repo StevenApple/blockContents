@@ -12,7 +12,12 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        if let userDefaults = UserDefaults(suiteName: "group.iOSContent") {
+            
+            
+            let value =  userDefaults.string(forKey: "key1")
+            print("What is the value here \(String(describing: value))")
+        }
     }
 
 
